@@ -26,6 +26,11 @@ typedef struct oned_csr_graph {
 	const tuple_graph* tg;
 } oned_csr_graph;
 
+extern int64_t *column;
+#ifdef SSSP
+extern float *weights;
+#endif
+
 void convert_graph_to_oned_csr(const tuple_graph* const tg, oned_csr_graph* const g);
 void free_oned_csr_graph(oned_csr_graph* const g);
 
